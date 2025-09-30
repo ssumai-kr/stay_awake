@@ -8,8 +8,8 @@ type LoginForm = {
 
 const testAccount = {
   id: "stayawake",
-  pw: "1234"
-}
+  pw: "123456",
+};
 
 export default function Home() {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function Home() {
 
   const onSubmit = (data: LoginForm) => {
     console.log("로그인 데이터:", data);
-    navigate('/DashBoard');
+    navigate("/DashBoard");
     // 👉 여기에 API 요청 넣으면 됨
   };
 

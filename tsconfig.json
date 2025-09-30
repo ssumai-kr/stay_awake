@@ -12,9 +12,11 @@
     "isolatedModules": true,
     "noEmit": true,
 
-    // ✅ JSX 처리 방식 지정 (React 17+는 react-jsx 권장)
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"],
   "exclude": ["node_modules"]
 }

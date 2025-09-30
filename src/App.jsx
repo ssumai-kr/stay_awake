@@ -1,6 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import DashBoard from './Test';
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import DashBoard from "./pages/Dashboard";
 
 function App() {
   return (
