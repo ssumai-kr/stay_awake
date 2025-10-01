@@ -1,15 +1,18 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import DashBoard from "./pages/Dashboard";
+import Layout from "./Layout/Layout";
+
 
 function App() {
   return (
-    <div className="">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/DashBoard" element={<DashBoard />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route element={<Layout />}>
+        <Route path="/dashboard" element={<DashBoard />} />
+      </Route>
+    </Routes>
   );
 }
 

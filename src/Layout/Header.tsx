@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DashBoardTab, ErrorTab, HeartTab } from "./Tabs";
+import { DashBoardTab, ErrorTab, HeartTab } from "../components/Tabs";
 
 export default function Header() {
   const [selectedTab, setSelectedTab] = useState("dashboard");
@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full h-[150px] border-b-[1px] border-[#E3E3E3]">
+      <header className="w-full h-[150px] border-b-[1px] border-[#7c7676] bg-[#f8f8f8]">
         <div className="flex flex-col w-full">
           <div className="flex gap-[10px] items-center pl-[20px] pt-[20px]">
             <div className="text-[24px] font-bold cursor-pointer">
