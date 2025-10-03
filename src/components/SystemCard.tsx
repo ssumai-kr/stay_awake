@@ -17,7 +17,7 @@ function getColorByRate(rate: number) {
 
 function ProgressBar({ rate = 0 }: { rate?: number }) {
   return (
-    <div className="w-[200px] h-3 bg-gray-200 rounded-full overflow-hidden">
+    <div className="w-[140px] md:w-[200px] h-3 bg-gray-200 rounded-full overflow-hidden">
       <div
         className="h-full transition-all duration-500"
         style={{
