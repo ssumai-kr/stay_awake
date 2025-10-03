@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import MiniCard from "@/components/MiniCard";
 import SystemCard from "@/components/SystemCard";
+import UserGraph from "@/components/UserGraph";
 
 export default function DashBoard() {
   const [currentTime, setCurrentTime] = useState<string>("");
@@ -8,16 +9,14 @@ export default function DashBoard() {
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      // YYYY-MM-DD HH:mm:ss 포맷
       const formatted = now
-        .toLocaleString("sv-SE", { timeZone: "Asia/Seoul" }) // ISO-like format
+        .toLocaleString("sv-SE", { timeZone: "Asia/Seoul" })
         .replace("T", " ");
       setCurrentTime(formatted);
     };
 
-    updateTime(); // 초기 실행
+    updateTime();
     const timer = setInterval(updateTime, 1000);
-
     return () => clearInterval(timer);
   }, []);
 
@@ -34,12 +33,13 @@ export default function DashBoard() {
           <MiniCard title="API 성공률" count={200} isPercentage />
         </div>
       </div>
-      <div className="flex justify-center mt-[24px] mb-[40px]">
+      <div className="flex flex-col gap-[24px] items-center justify-center mt-[24px] mb-[40px]">
         <SystemCard
           faceRecognitionRate={95}
           heartRateMeasurementRate={60}
           alarmOperationRate={15}
         />
+        <UserGraph /> {/* ✅ React.memo 적용으로 리렌더링 방지 */}
       </div>
     </>
   );

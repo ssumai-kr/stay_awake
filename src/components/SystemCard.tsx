@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 interface SystemCardProps {
   faceRecognitionRate?: number;
   heartRateMeasurementRate?: number;
@@ -32,7 +34,7 @@ export default function SystemCard({
   heartRateMeasurementRate = 0,
   alarmOperationRate = 0,
 }: SystemCardProps) {
-  const today = new Date().toISOString().split("T")[0]; // "YYYY-MM-DD"
+  const today = useMemo(() => new Date().toISOString().split("T")[0], []);
 
   return (
     <div className="w-[1136px] h-auto bg-white rounded-[10px] p-4 shadow-md">
