@@ -1,7 +1,7 @@
 import DrawsyChart from "@/components/DrawsyChart";
 import HeartRateChart from "@/components/HeartRateChart";
 
-export default function DataSet() {
+export default function DataChart() {
   return (
     <>
       <div className="flex flex-col gap-4 justify-center items-center mt-4 mb-4">

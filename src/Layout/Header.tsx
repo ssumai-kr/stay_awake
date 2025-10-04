@@ -30,8 +30,8 @@ export default function Header() {
           onClick={() => handleTabClick("dashboard", "/dashboard")}
         />
         <HeartTab
-          isSelected={selectedTab === "dataset"}
-          onClick={() => handleTabClick("dataset", "/dataset")}
+          isSelected={selectedTab === "datachart"}
+          onClick={() => handleTabClick("datachart", "/datachart")}
         />
         <ErrorTab
           isSelected={selectedTab === "errorMonitoring"}
