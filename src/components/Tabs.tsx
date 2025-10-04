@@ -18,7 +18,7 @@ export function DashBoardTab({
       onClick={onClick}
     >
       <img src={isSelected ? DashImg : DashBlackImg} alt="DashBoard" />
-      <span className='text-[10px] md:text-[14px]'>대시보드</span>
+      <span className="text-[10px] md:text-[14px]">대시보드</span>
     </div>
   );
 }
@@ -35,7 +35,7 @@ export function HeartTab({
       onClick={onClick}
     >
       <img src={isSelected ? HeartWhiteImg : HeartImg} alt="Heart" />
-      <span className='text-[10px] md:text-[14px]'>생체 데이터</span>
+      <span className="text-[10px] md:text-[14px]">생체 데이터</span>
     </div>
   );
 }
@@ -52,7 +52,7 @@ export function ErrorTab({
       onClick={onClick}
     >
       <img src={isSelected ? ErrorWhiteImg : ErrorImg} alt="Error" />
-      <span className='text-[10px] md:text-[14px]'>에러 모니터링</span>
+      <span className="text-[10px] md:text-[14px]">에러 모니터링</span>
     </div>
   );
 }

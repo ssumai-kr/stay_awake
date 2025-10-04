@@ -1,5 +1,5 @@
-import { useMemo } from 'react';
-import ErrorPieChart from './ErrorPieChart';
+import { useMemo } from "react";
+import ErrorPieChart from "./ErrorPieChart";
 
 export default function ErrorPieCard() {
   const weekRange = useMemo(() => {

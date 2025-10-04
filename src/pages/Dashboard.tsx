@@ -1,29 +1,29 @@
-import { useState, useEffect, useMemo } from 'react';
-import MiniCard from '@/components/MiniCard';
-import SystemCard from '@/components/SystemCard';
-import UserGraph from '@/components/UserGraph';
-import ErrorPieCard from '@/components/ErrorPieCard';
+import { useState, useEffect, useMemo } from "react";
+import MiniCard from "@/components/MiniCard";
+import SystemCard from "@/components/SystemCard";
+import UserGraph from "@/components/UserGraph";
+import ErrorPieCard from "@/components/ErrorPieCard";
 
 export default function DashBoard() {
-  const [currentTime, setCurrentTime] = useState<string>('');
+  const [currentTime, setCurrentTime] = useState<string>("");
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsTablet(window.innerWidth < 768); // Tailwind 기준 lg:768px
     };
-    
+
     handleResize(); // 초기 실행
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
       const formatted = now
-        .toLocaleString('sv-SE', { timeZone: 'Asia/Seoul' })
-        .replace('T', ' ');
+        .toLocaleString("sv-SE", { timeZone: "Asia/Seoul" })
+        .replace("T", " ");
       setCurrentTime(formatted);
     };
 
@@ -40,7 +40,7 @@ export default function DashBoard() {
         </div>
         <div
           className={`flex flex-wrap gap-[24px] mt-[20px] justify-center w-full ${
-            isTablet ? 'basis-1/2' : 'basis-1/4'
+            isTablet ? "basis-1/2" : "basis-1/4"
           }`}
         >
           <MiniCard title="전체 사용자" count={1500} percentage={10} />

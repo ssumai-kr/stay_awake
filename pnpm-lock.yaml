@@ -35,6 +35,9 @@ importers:
       recharts:
         specifier: ^3.2.1
         version: 3.2.1(@types/react@19.1.13)(react-dom@19.1.1(react@19.1.1))(react-is@19.2.0)(react@19.1.1)(redux@5.0.1)
+      stayawake:
+        specifier: 'link:'
+        version: 'link:'
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1

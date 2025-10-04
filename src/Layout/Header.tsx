@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { DashBoardTab, ErrorTab, HeartTab } from '../components/Tabs';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { DashBoardTab, ErrorTab, HeartTab } from "../components/Tabs";
 
 export default function Header() {
-  const [selectedTab, setSelectedTab] = useState('dashboard');
+  const [selectedTab, setSelectedTab] = useState("dashboard");
   const navigate = useNavigate();
 
   const handleTabClick = (tab: string, path: string) => {
@@ -26,16 +26,16 @@ export default function Header() {
       </div>
       <div className="flex gap-[14px] pl-[20px] pt-[20px]">
         <DashBoardTab
-          isSelected={selectedTab === 'dashboard'}
-          onClick={() => handleTabClick('dashboard', '/dashboard')}
+          isSelected={selectedTab === "dashboard"}
+          onClick={() => handleTabClick("dashboard", "/dashboard")}
         />
         <HeartTab
-          isSelected={selectedTab === 'dataset'}
-          onClick={() => handleTabClick('dataset', '/dataset')}
+          isSelected={selectedTab === "dataset"}
+          onClick={() => handleTabClick("dataset", "/dataset")}
         />
         <ErrorTab
-          isSelected={selectedTab === 'errorMonitoring'}
-          onClick={() => handleTabClick('errorMonitoring', '/errorMonitoring')}
+          isSelected={selectedTab === "errorMonitoring"}
+          onClick={() => handleTabClick("errorMonitoring", "/errorMonitoring")}
         />
       </div>
     </header>

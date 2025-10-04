@@ -20,8 +20,12 @@ function MiniCardPercentage({ percentage }: MiniCardPercentageProps) {
   );
 }
 
-
-export default function MiniCard({ title, count, percentage, isPercentage }: MiniCardProps) {
+export default function MiniCard({
+  title,
+  count,
+  percentage,
+  isPercentage,
+}: MiniCardProps) {
   return (
     <>
       <div className="w-[266px] h-[80px] bg-white rounded-[10px] shadow-md p-4">
@@ -44,5 +48,3 @@ export default function MiniCard({ title, count, percentage, isPercentage }: Min
     </>
   );
 }
-
-
