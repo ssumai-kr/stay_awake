@@ -15,6 +15,7 @@ function App() {
         <Route path="/datachart" element={<DataChart />} />
         <Route path="/errorMonitoring" element={<div>Monitoring Page</div>} />
       </Route>
+      <Route path="*" element={<div>404 Not Found</div>} />
     </Routes>
   );
 }
