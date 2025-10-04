@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import DashBoard from './Dashboard';
-import DataSet from './DataSet';
 import Layout from '@/Layout/Layout';
 import Home from '@/Home';
+import DashBoard from '@/pages/Dashboard';
+import DataSet from '@/pages/DataSet';
+
 
 function App() {
   return (
