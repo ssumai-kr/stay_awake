@@ -1,8 +1,8 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import DashBoard from "./pages/Dashboard";
-import Layout from "./Layout/Layout";
-import DataSet from "./pages/DataSet";
+import { Routes, Route } from 'react-router-dom';
+import DashBoard from './Dashboard';
+import DataSet from './DataSet';
+import Layout from '@/Layout/Layout';
+import Home from '@/Home';
 
 function App() {
   return (
