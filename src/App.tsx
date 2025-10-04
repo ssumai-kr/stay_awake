@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from '@/Layout/Layout';
 import Home from '@/Home';
 import DashBoard from '@/pages/Dashboard';
-import DataSet from '@/pages/DataSet';
 
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
 
       <Route element={<Layout />}>
         <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/dataset" element={<DataSet />} />
         <Route path="/errorMonitoring" element={<div>Monitoring Page</div>} />
       </Route>
     </Routes>
